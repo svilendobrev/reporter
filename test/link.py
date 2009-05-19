@@ -53,7 +53,26 @@ all_cases = [
 ]
 ###############################################
 
-from reporter.link import Link, LinkContainer, LinkDict
+from reporter.link import Link, LinkContainer#, LinkDict
+
+#this from r5000!
+from reporter.link import LinkBase
+class LinkDict( dict):
+    def __init__( me, *args, **kargs):
+        dict.__init__( me, *args, **kargs)
+        for k,v in me.iteritems():
+            if isinstance( v, LinkBase):
+                me[ k] = v.dereference( me)
+
+    def __setattr__( me, name, value):
+        me[ name ] = value
+    def __getattr__( me, name):
+        try:
+            return me[ name ]
+        except KeyError:
+            raise AttributeError, name
+
+
 def test_case_factory( case_params, TestCaseClass):
     class LinkCase( TestCaseClass):
         name = case_params.pop('description')

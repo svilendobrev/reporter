@@ -119,7 +119,7 @@ def get_rows_db():
         test_db.append( r)
     return test_db
 
-test_db_data = get_rows_db()
+#test_db_data = get_rows_db()
 
 class TestParams( object):
     def __init__( me, obj, expected, descr):
