@@ -1,0 +1,3 @@
+[submodule "engine/util"]
+	path = engine/util
+	url = https://github.com/svilendobrev/svd_util.git
