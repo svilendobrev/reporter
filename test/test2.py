@@ -3,7 +3,7 @@
 
 from test_set import *
 from reporter.row_classifier import RowClassifier
-from svd_util.testeng.testbase import Case as _Case
+from svd_util.testeng.base import Case as _Case
 
 class Test:
     VERBOSE = 0
@@ -93,7 +93,7 @@ class Test:
                 print view
 
 if __name__ == "__main__":
-    from svd_util.testeng.testutils import testMain
+    from svd_util.testeng.utils import testMain
     testMain( [ Test.Case( 'test_db', test_db_data[:], Test.samples)], verbosity= Test.VERBOSE )
 
 
