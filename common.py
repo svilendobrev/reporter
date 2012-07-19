@@ -271,7 +271,7 @@ def threshold( attr2compare_or_func):
 
 
 import wx
-from reporter.engine.ui.uitools import _
+from svd_util.ui.wxtxt import _
 class CustomizedPreviewControlBar( wx.PyPreviewControlBar):
     '''
     def SetZoomControl( me, zoom):
