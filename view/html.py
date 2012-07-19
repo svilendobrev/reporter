@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from pdf import PdfView
 class HtmlView( PdfView):

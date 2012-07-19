@@ -1,14 +1,14 @@
 #$Id$
-# -*- coding: cp1251 -*-
-''' Тества че:
-    за класа Row:
-    - един ред притежава полетата на своя родител
-    - един ред изчислява правилно своите изчислими полета, със и без родител
+# -*- coding: utf-8 -*-
+''' РўРµСЃС‚РІР° С‡Рµ:
+    Р·Р° РєР»Р°СЃР° Row:
+    - РµРґРёРЅ СЂРµРґ РїСЂРёС‚РµР¶Р°РІР° РїРѕР»РµС‚Р°С‚Р° РЅР° СЃРІРѕСЏ СЂРѕРґРёС‚РµР»
+    - РµРґРёРЅ СЂРµРґ РёР·С‡РёСЃР»СЏРІР° РїСЂР°РІРёР»РЅРѕ СЃРІРѕРёС‚Рµ РёР·С‡РёСЃР»РёРјРё РїРѕР»РµС‚Р°, СЃСЉСЃ Рё Р±РµР· СЂРѕРґРёС‚РµР»
 
-    за класа AggrRow:
-    - притежава полетата на своя родител
-    - агрегиращата функция се изчислява върху всички редове
-    - вдига изцепка ако в някой от редовете липсва търсеното поле
+    Р·Р° РєР»Р°СЃР° AggrRow:
+    - РїСЂРёС‚РµР¶Р°РІР° РїРѕР»РµС‚Р°С‚Р° РЅР° СЃРІРѕСЏ СЂРѕРґРёС‚РµР»
+    - Р°РіСЂРµРіРёСЂР°С‰Р°С‚Р° С„СѓРЅРєС†РёСЏ СЃРµ РёР·С‡РёСЃР»СЏРІР° РІСЉСЂС…Сѓ РІСЃРёС‡РєРё СЂРµРґРѕРІРµ
+    - РІРґРёРіР° РёР·С†РµРїРєР° Р°РєРѕ РІ РЅСЏРєРѕР№ РѕС‚ СЂРµРґРѕРІРµС‚Рµ Р»РёРїСЃРІР° С‚СЉСЂСЃРµРЅРѕС‚Рѕ РїРѕР»Рµ
 '''
 from test_set import *
 from reporter.row import *
@@ -28,13 +28,13 @@ class BaseAgg( AggrRow):
         return sum( me.column( 'a'))
     def sum_b(me):
         return sum( me.column( 'b'))
-    _set_ = dict( text='Сума:', value=50)
+    _set_ = dict( text='РЎСѓРјР°:', value=50)
     _calc_ = dict( a=sum_a, b=sum_b)
 
 class MyAgg( BaseAgg):
     def sum_c(me):
         return sum( me.column( 'c'))
-    _set_ = dict( text='Пума:', value=100)
+    _set_ = dict( text='РџСѓРјР°:', value=100)
     _calc_ = dict( b=sum_c)
 
 class MyAgg2( BaseAgg):
@@ -55,12 +55,12 @@ all_cases = [
                 P( MyRow()       , dict(a=5,b=2,c=3,d=10,e=15,f=13), 'child row, defaults'     ),
                 P( MyRow(a=6,h=1), dict(a=6,b=2,c=3,d=10,e=15,f=13), 'child row, init values'  ),
 
-                P( BaseAgg(rows)                , dict(a=15,b=6,text='Сума:',value=50)  , 'base agg, defaults'   ),
+                P( BaseAgg(rows)                , dict(a=15,b=6,text='РЎСѓРјР°:',value=50)  , 'base agg, defaults'   ),
                 P( BaseAgg(rows, text='Suma')   , dict(a=15,b=6,text='Suma',value=50)   , 'base agg, init values'),
-                P( MyAgg(rows)                  , dict(a=15,b=9,text='Пума:',value=100) , 'child agg, defaults'   ),
+                P( MyAgg(rows)                  , dict(a=15,b=9,text='РџСѓРјР°:',value=100) , 'child agg, defaults'   ),
                 P( MyAgg(rows, text='Guma')     , dict(a=15,b=9,text='Guma',value=100)  , 'child agg, init values'),
 
-#                P( MyAgg2(rows2), dict(a=17, b=10, d=32, text='Сума:', value=100), 'base agg, init values'),
+#                P( MyAgg2(rows2), dict(a=17, b=10, d=32, text='РЎСѓРјР°:', value=100), 'base agg, init values'),
             ]
 
 class RowCase( Case):

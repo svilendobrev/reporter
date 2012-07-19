@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 import pyXLWriter as xl
 #from dbcook.util.hacksrc import hacksrc
 

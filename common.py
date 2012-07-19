@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 from field import Float, Int, Text, Date, DateTime
 from field import FieldDef as Field, FieldDef, FieldDef as FldDef, ViewDef, Style
@@ -296,13 +296,13 @@ class CustomizedPreviewControlBar( wx.PyPreviewControlBar):
         navButtonSize = wx.Size(40, wx.DefaultSize.y)
 
         buttons_description = [
-            ( wx.ID_PREVIEW_CLOSE     , _('&Отказ')      , wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
-            ( wx.ID_PREVIEW_PRINT     , _('&Печат...')   , wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
+            ( wx.ID_PREVIEW_CLOSE     , _('&РћС‚РєР°Р·')      , wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
+            ( wx.ID_PREVIEW_PRINT     , _('&РџРµС‡Р°С‚...')   , wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
             ( wx.ID_PREVIEW_FIRST     , _('|<<')         , navButtonSize  , wx.ALIGN_CENTRE | wx.ALL ),
             ( wx.ID_PREVIEW_PREVIOUS  , _('<<')          , navButtonSize  , wx.ALIGN_CENTRE | wx.RIGHT | wx.TOP | wx.BOTTOM ),
             ( wx.ID_PREVIEW_NEXT      , _('>>')          , navButtonSize  , wx.ALIGN_CENTRE | wx.RIGHT | wx.TOP | wx.BOTTOM ),
             ( wx.ID_PREVIEW_LAST      , _('>>|')         , navButtonSize  , wx.ALIGN_CENTRE | wx.RIGHT | wx.TOP | wx.BOTTOM ),
-            ( wx.ID_PREVIEW_GOTO      , _('&Страница...'), wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
+            ( wx.ID_PREVIEW_GOTO      , _('&РЎС‚СЂР°РЅРёС†Р°...'), wx.DefaultSize , wx.ALIGN_CENTRE | wx.ALL ),
         ]
 
         for descr in buttons_description:

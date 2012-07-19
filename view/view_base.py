@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 if 1:
     def conv(txt, to='utf-8'):
@@ -98,9 +98,9 @@ class ViewerBase( object):
         return None
 
     def get_default( me, attr_name, view =None, default =None):
-        # FIXME тука що търся във view след като неговите defaults са му сетнати
-        # още след наследяванията
-        # layout_defaults явно не е за атрибути на view-то а само за страничните неща margins etc.
+        # FIXME С‚СѓРєР° С‰Рѕ С‚СЉСЂСЃСЏ РІСЉРІ view СЃР»РµРґ РєР°С‚Рѕ РЅРµРіРѕРІРёС‚Рµ defaults СЃР° РјСѓ СЃРµС‚РЅР°С‚Рё
+        # РѕС‰Рµ СЃР»РµРґ РЅР°СЃР»РµРґСЏРІР°РЅРёСЏС‚Р°
+        # layout_defaults СЏРІРЅРѕ РЅРµ Рµ Р·Р° Р°С‚СЂРёР±СѓС‚Рё РЅР° view-С‚Рѕ Р° СЃР°РјРѕ Р·Р° СЃС‚СЂР°РЅРёС‡РЅРёС‚Рµ РЅРµС‰Р° margins etc.
         last_name = attr_name.split('.')[-1]
         spr_defaults = getattr( me.spr, 'layout_defaults', {})
         res = spr_defaults.get( last_name)

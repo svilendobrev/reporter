@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 #from reporter.engine.ui.layout import Panel
 from layout import Panel
@@ -15,9 +15,9 @@ def makeOkCancelPanel( col_span =1, save =False, default =True, printout =False)
     layout += '<OK> <Cancel>'
     return Panel( layout,
                 field_map= dict( OK         = dict( default= default, label = ' ', img = 'ok.png', size= BTN_SIZE),
-                                SaveAndNew  = dict( label = 'Съхрани и създай нов', img = 'save&new.png', size= BTN_SIZE),
-                                Printout    = dict( label = 'Печат', img = 'print.png', size = BTN_SIZE),
-                                Cancel      = dict( default= default, label = 'Изход', img = 'exit.png', size= BTN_SIZE)
+                                SaveAndNew  = dict( label = 'РЎСЉС…СЂР°РЅРё Рё СЃСЉР·РґР°Р№ РЅРѕРІ', img = 'save&new.png', size= BTN_SIZE),
+                                Printout    = dict( label = 'РџРµС‡Р°С‚', img = 'print.png', size = BTN_SIZE),
+                                Cancel      = dict( default= default, label = 'РР·С…РѕРґ', img = 'exit.png', size= BTN_SIZE)
                                 ),
                 align = 'right',
                 col_span = col_span
@@ -25,7 +25,7 @@ def makeOkCancelPanel( col_span =1, save =False, default =True, printout =False)
 
 def makeCloseButtonPanel( col_span=1, default=False):
     return Panel( '<Cancel>',
-                field_map= dict( Cancel= dict( default= default, label='Изход', img = 'exit.png', size= BTN_SIZE)),
+                field_map= dict( Cancel= dict( default= default, label='РР·С…РѕРґ', img = 'exit.png', size= BTN_SIZE)),
                 align = 'right',
                 col_span = col_span
             )
@@ -33,9 +33,9 @@ def makeCloseButtonPanel( col_span=1, default=False):
 def panel4filter_ime(with_code=False):
     return Panel( ' [filter_ime] ' + (with_code and '[_ by_code ]' or ''),
             field_map= dict(
-                filter_ime = dict( label='Филтър', expand='x', search_on_change =True),
-                by_code = dict(label='По код'),
-#               Refresh    = dict( label='Търсене', default=True), #leave it for now
+                filter_ime = dict( label='Р¤РёР»С‚СЉСЂ', expand='x', search_on_change =True),
+                by_code = dict(label='РџРѕ РєРѕРґ'),
+#               Refresh    = dict( label='РўСЉСЂСЃРµРЅРµ', default=True), #leave it for now
             ),
         )
 
@@ -50,12 +50,12 @@ chooser_MAP = dict(
     chooser_data= dict(view_type='list_multi', label='')
 )
 
-panel4filter_date = Panel( '''@Филтър
+panel4filter_date = Panel( '''@Р¤РёР»С‚СЉСЂ
     [ interval.valid_date_from] [ interval.valid_date_to] [ interval.trans_date] [_ interval.group]< refresh>
 ''', field_map= {
-    'interval.valid_date_from'  : dict(label='От дата:', choosable='calendar'),
-    'interval.valid_date_to'    : dict(label='До дата:', choosable='calendar'),
-    'interval.trans_date'       : dict(label='Kam дата:', choosable='calendar'),
+    'interval.valid_date_from'  : dict(label='РћС‚ РґР°С‚Р°:', choosable='calendar'),
+    'interval.valid_date_to'    : dict(label='Р”Рѕ РґР°С‚Р°:', choosable='calendar'),
+    'interval.trans_date'       : dict(label='Kam РґР°С‚Р°:', choosable='calendar'),
     'interval.group'            : dict(label='Po dati'),
     'refresh'                   : dict(label='Tarsi', default=True),
     },

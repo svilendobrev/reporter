@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 class Item( object):
     _delimiter=' '
@@ -87,8 +87,8 @@ class Sheet( Node):
                 x.walk( visitor)
         visitor.Sheet( me, False)
 
-#XXX всички форматски неща могат да са както избрани от палитра/набор,
-# така и директно пълно специфицирани.
+#XXX РІСЃРёС‡РєРё С„РѕСЂРјР°С‚СЃРєРё РЅРµС‰Р° РјРѕРіР°С‚ РґР° СЃР° РєР°РєС‚Рѕ РёР·Р±СЂР°РЅРё РѕС‚ РїР°Р»РёС‚СЂР°/РЅР°Р±РѕСЂ,
+# С‚Р°РєР° Рё РґРёСЂРµРєС‚РЅРѕ РїСЉР»РЅРѕ СЃРїРµС†РёС„РёС†РёСЂР°РЅРё.
 class Font( Item):
     'many kinds of fontspecs are available, e.g. X, windoze, etc'
     def __init__( me,

@@ -1,10 +1,10 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
-''' Да се пробва че:
-    - се добавят редове
-    - не се добавят редове в затворен пакет
-    - всички редове участват в агрегацията
+''' Р”Р° СЃРµ РїСЂРѕР±РІР° С‡Рµ:
+    - СЃРµ РґРѕР±Р°РІСЏС‚ СЂРµРґРѕРІРµ
+    - РЅРµ СЃРµ РґРѕР±Р°РІСЏС‚ СЂРµРґРѕРІРµ РІ Р·Р°С‚РІРѕСЂРµРЅ РїР°РєРµС‚
+    - РІСЃРёС‡РєРё СЂРµРґРѕРІРµ СѓС‡Р°СЃС‚РІР°С‚ РІ Р°РіСЂРµРіР°С†РёСЏС‚Р°
 '''
 import unittest
 from test_set import *
@@ -36,7 +36,7 @@ class TestClosedPacket( TestPacket):
         me.packet.close( me.aggregators, lambda: False)
 
     def test_add( me):
-        for i in range( len( me.rows)):     #XXX WTF прави това?
+        for i in range( len( me.rows)):     #XXX WTF РїСЂР°РІРё С‚РѕРІР°?
             r = me.rows[i]
             me.assertEqual( me.packet.rows, [])
 

@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from reporter.engine.util.struct import DictAttr
 

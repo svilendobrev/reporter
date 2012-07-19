@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 from spravka2 import SprDef
 from row import Row, AggrRow
@@ -13,7 +13,7 @@ from viewer2 import *
 class AggTrDogovor( AggrRow):
     def get_zaplata( me):
         return sum( me.column('osn_zaplata'))
-    _set_ = dict( short_name = 'Общо:')
+    _set_ = dict( short_name = 'РћР±С‰Рѕ:')
     _calc_ = dict( osn_zaplata = get_zaplata)
 
 
@@ -28,7 +28,7 @@ class SprExtCalc( SprDef):
 
         _extcalc_ = dict( percent=FldDef( type=Float,
               data=lambda row: Decimal(row.osn_zaplata) * 100 / row.packet.agg_rows[0].osn_zaplata,
-              view=FldView( label='Процент', align='r', border='r')))
+              view=FldView( label='РџСЂРѕС†РµРЅС‚', align='r', border='r')))
 
     RowType = RowTrDogovor
 

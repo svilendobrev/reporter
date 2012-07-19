@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 class RowClassifier( object):
     ''' Arranges rows into groups using classifier thresholds. Each group

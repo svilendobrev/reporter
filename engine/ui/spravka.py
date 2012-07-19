@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 from data_model import Browseable as Browsable, FBR, ColDef
 from myctl import ActionChooser, BasicController, Chooser
@@ -106,8 +106,8 @@ class SpravkaExportChooser( BasicController):
     def data_model_factory(me, *a, **ka):
         class Fmt:
             _format = Browsable(data = [], column_defs = (
-                ColDef('fmt', 'Формат', minwidth = 100),
-                ColDef('desc', 'Описание', minwidth = 100, maxwidth = -1),
+                ColDef('fmt', 'Р¤РѕСЂРјР°С‚', minwidth = 100),
+                ColDef('desc', 'РћРїРёСЃР°РЅРёРµ', minwidth = 100, maxwidth = -1),
             ))
         return Fmt()
 
@@ -132,8 +132,8 @@ class SpravkaExportChooser( BasicController):
         from reporter.engine.ui.layout import Panel
         from reporter.engine.ui.generic_layouts import makeOkCancelPanel
         fmap = dict( _format = dict( label = '', view_type = 'list_multi', expand = 'xy'))
-        txt = '@Изберете формат\n[? _format ]'
-        p = (Panel( title = 'Експорт', minsize = (320,240)) +
+        txt = '@РР·Р±РµСЂРµС‚Рµ С„РѕСЂРјР°С‚\n[? _format ]'
+        p = (Panel( title = 'Р•РєСЃРїРѕСЂС‚', minsize = (320,240)) +
              Panel( txt = txt, field_map = fmap, expand = 'xy') +
              makeOkCancelPanel())
         return p
@@ -161,8 +161,8 @@ class SpravkaController( ActionChooser):
     EXTRA_ACTIONS = ActionChooser.EXTRA_ACTIONS + ['action_Refresh', 'action_Printout', 'action_Export']
 
     def action_Refresh( me, *args, **kargs):
-        updater = me.view.ProgressDialog( title= 'Моля, изчакайте..',
-                                          message= 'Зареждане на данни' )
+        updater = me.view.ProgressDialog( title= 'РњРѕР»СЏ, РёР·С‡Р°РєР°Р№С‚Рµ..',
+                                          message= 'Р—Р°СЂРµР¶РґР°РЅРµ РЅР° РґР°РЅРЅРё' )
         updater.update()
         me.setValue( *args, **kargs)
         #me.Redraw()
@@ -170,10 +170,10 @@ class SpravkaController( ActionChooser):
 
     def action_Printout( me):
         from reporter.common import show_preview
-        updater = me.view.ProgressDialog( title= 'Моля, изчакайте..',
-                                          message= 'Подготовка на печат' )
+        updater = me.view.ProgressDialog( title= 'РњРѕР»СЏ, РёР·С‡Р°РєР°Р№С‚Рµ..',
+                                          message= 'РџРѕРґРіРѕС‚РѕРІРєР° РЅР° РїРµС‡Р°С‚' )
         updater.update()
-        label = 'Печат на '+str( me.title)
+        label = 'РџРµС‡Р°С‚ РЅР° '+str( me.title)
         show_preview( me.model.spr, label, parent=me.view.frame)
         updater.close()
 

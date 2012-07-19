@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from reporter.engine.util.attr import get_attrib
 

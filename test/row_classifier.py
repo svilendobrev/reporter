@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from test_set import *
 from reporter.row_classifier import RowClassifier

@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 from test_set import *
 from reporter.row_classifier import RowClassifier
@@ -27,14 +27,14 @@ class Test:
 
     t = Sample
     samples = [#   threshold_func    filter      aggregators         (packet sz, agg rows)
-                t( None           , None      , None              , ([ 12]  ,  None     ), 'група без нищо'                      ),
-                t( th_otrab_dni   , None      , None              , ([3,6,3],  None     ), 'група с праг'                        ),
-                t( th_otrab_dni   , ivan_only , None              , ([3,6,3],  None     ), 'група с праг и филтър'               ),
-                t( th_otrab_dni   , None      , [ AggAvg, AggSum ], ([3,6,3],  [3,6,3]  ), 'група с праг и агрегатори'           ),
-                t( th_otrab_dni   , ivan_only , [ AggAvg, AggSum ], ([3,6,3],  [2,4,2]  ), 'група с праг, филтър и агрегатори'   ),
-                t( None           , ivan_only , None              , ([12]   ,  None     ), 'група с филтър'                      ),
-                t( None           , ivan_only , [ AggAvg, AggSum ], ([12]   ,  [8]      ), 'група с филтър и агрегатори'         ),
-                t( None           , None      , [ AggAvg, AggSum ], ([12]   ,  [12]     ), 'група само с агрегатори'             ),
+                t( None           , None      , None              , ([ 12]  ,  None     ), 'РіСЂСѓРїР° Р±РµР· РЅРёС‰Рѕ'                      ),
+                t( th_otrab_dni   , None      , None              , ([3,6,3],  None     ), 'РіСЂСѓРїР° СЃ РїСЂР°Рі'                        ),
+                t( th_otrab_dni   , ivan_only , None              , ([3,6,3],  None     ), 'РіСЂСѓРїР° СЃ РїСЂР°Рі Рё С„РёР»С‚СЉСЂ'               ),
+                t( th_otrab_dni   , None      , [ AggAvg, AggSum ], ([3,6,3],  [3,6,3]  ), 'РіСЂСѓРїР° СЃ РїСЂР°Рі Рё Р°РіСЂРµРіР°С‚РѕСЂРё'           ),
+                t( th_otrab_dni   , ivan_only , [ AggAvg, AggSum ], ([3,6,3],  [2,4,2]  ), 'РіСЂСѓРїР° СЃ РїСЂР°Рі, С„РёР»С‚СЉСЂ Рё Р°РіСЂРµРіР°С‚РѕСЂРё'   ),
+                t( None           , ivan_only , None              , ([12]   ,  None     ), 'РіСЂСѓРїР° СЃ С„РёР»С‚СЉСЂ'                      ),
+                t( None           , ivan_only , [ AggAvg, AggSum ], ([12]   ,  [8]      ), 'РіСЂСѓРїР° СЃ С„РёР»С‚СЉСЂ Рё Р°РіСЂРµРіР°С‚РѕСЂРё'         ),
+                t( None           , None      , [ AggAvg, AggSum ], ([12]   ,  [12]     ), 'РіСЂСѓРїР° СЃР°РјРѕ СЃ Р°РіСЂРµРіР°С‚РѕСЂРё'             ),
             ]
 
     class Case( _Case):
@@ -73,11 +73,11 @@ class Test:
                                 dni_za_mes  ='r',
                                 realna_zap  ='r')
 
-                captions = dict(slujitel    ='Служител'        ,
-                                osn_zaplata ='Осн.заплата'     ,
-                                otrab_dni   ='Отработени дни'  ,
-                                dni_za_mes  ='Раб.дни в месеца',
-                                realna_zap  ='Реална заплата'  )
+                captions = dict(slujitel    ='РЎР»СѓР¶РёС‚РµР»'        ,
+                                osn_zaplata ='РћСЃРЅ.Р·Р°РїР»Р°С‚Р°'     ,
+                                otrab_dni   ='РћС‚СЂР°Р±РѕС‚РµРЅРё РґРЅРё'  ,
+                                dni_za_mes  ='Р Р°Р±.РґРЅРё РІ РјРµСЃРµС†Р°',
+                                realna_zap  ='Р РµР°Р»РЅР° Р·Р°РїР»Р°С‚Р°'  )
 
                 vborders = dict(slujitel    = 'lr',
                                 osn_zaplata = 'r',

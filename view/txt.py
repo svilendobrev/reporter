@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 def align_l( txt, sz):  return txt.ljust( sz)
 def align_r( txt, sz):  return txt.rjust( sz)

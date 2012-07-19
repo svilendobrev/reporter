@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from data_model import Browseable4DB
 from spravka import SprDataModel

@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 class BaseCommandContainer( object):
     ''' basic interface for command manager/container '''

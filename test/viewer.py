@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 from test_set import *
 from reporter.row_classifier import RowClassifier
 
@@ -10,11 +10,11 @@ aligns = dict(  sluzhitel   ='l',
                 dni_za_mes  ='r',
                 realna_zap  ='r')
 
-captions = dict(sluzhitel   ='Служител'        ,
-                osn_zaplata ='Осн.заплата'     ,
-                otrab_dni   ='Отработени дни'  ,
-                dni_za_mes  ='Раб.дни в месеца',
-                realna_zap  ='Реална заплата'  )
+captions = dict(sluzhitel   ='РЎР»СѓР¶РёС‚РµР»'        ,
+                osn_zaplata ='РћСЃРЅ.Р·Р°РїР»Р°С‚Р°'     ,
+                otrab_dni   ='РћС‚СЂР°Р±РѕС‚РµРЅРё РґРЅРё'  ,
+                dni_za_mes  ='Р Р°Р±.РґРЅРё РІ РјРµСЃРµС†Р°',
+                realna_zap  ='Р РµР°Р»РЅР° Р·Р°РїР»Р°С‚Р°'  )
 
 vborders = dict(sluzhitel   = 'lr',
                 osn_zaplata = 'r',

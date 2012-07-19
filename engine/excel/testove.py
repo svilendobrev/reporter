@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 from builder import XcelBuilder
 from visitor import Visitor
@@ -74,7 +74,7 @@ werterftyujtr '''*5
 
     def test04_cirilic( me):
         s = me.sheet
-        s.cell(0,13).value= 'алабаланица'
+        s.cell(0,13).value= 'Р°Р»Р°Р±Р°Р»Р°РЅРёС†Р°'
 
     def test05_unicode( me):
         s = me.sheet
@@ -150,9 +150,9 @@ class Cell_formulas( Test_Xcel): ##### sheet 5
         s = me.sheet
         s.cell( 1,0, value= 8)
         s.cell( 1,1, value= 2)
-        s.cell( 1,2).formula= '=B1+B2'  # със SUM
+        s.cell( 1,2).formula= '=B1+B2'  # СЃСЉСЃ SUM
         s.cell( 1,3).formula= '=B1-B2'
-        s.cell( 1,4).formula= '=B1*B2'  # с POWER също
+        s.cell( 1,4).formula= '=B1*B2'  # СЃ POWER СЃСЉС‰Рѕ
         s.cell( 1,5).formula= '=B1/B2'
         s.cell( 1,6).formula= '=B1**B2'
 
@@ -195,17 +195,17 @@ class Cell_Other( Test_Xcel ): ## sheet 6
 
 class Objects( Test_Xcel):  ##### sheet 7
 
-    def test23_link( me): ## за клетка
+    def test23_link( me): ## Р·Р° РєР»РµС‚РєР°
         s = me.sheet
         s.cell( 7,0, value= 'http://www.razni.com' )
 
     def test24_pagebreak( me):
         s = me.sheet
-        s.page_break(3,3) # колона, ред
+        s.page_break(3,3) # РєРѕР»РѕРЅР°, СЂРµРґ
 
     def test25_picture( me):
         s = me.sheet
-        s.cell(9,4).picture= 'proba/republic.bmp' # пътя към картинката
+        s.cell(9,4).picture= 'proba/republic.bmp' # РїСЉС‚СЏ РєСЉРј РєР°СЂС‚РёРЅРєР°С‚Р°
 
 #########################################################################################
 

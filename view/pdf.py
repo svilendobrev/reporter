@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from reportlab.platypus import TableStyle, LongTable
 from reportlab.platypus.para import Paragraph

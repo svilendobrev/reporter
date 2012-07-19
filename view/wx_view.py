@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 from txt import FldView, ViewAttr
 class wxBrowsableView( FldView):

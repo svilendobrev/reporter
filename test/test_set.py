@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 class Fld( object):
     def __init__( me, data=None):
@@ -50,7 +50,7 @@ class AggAvg( AggrRow):
     def avg_days_get(me):
         return FloatFld( avg( me.column( 'dni_za_mes')))
 
-    _set_ = dict( otrab_dni=TextFld( '—Â‰ÌÓ:'))
+    _set_ = dict( otrab_dni=TextFld( '–°—Ä–µ–¥–Ω–æ:'))
     _calc_ = dict( realna_zap=avg_zap_get, dni_za_mes=avg_days_get)
 
 class AggSum( AggrRow):
@@ -59,7 +59,7 @@ class AggSum( AggrRow):
     def sum_days_get(me):
         return FloatFld(  sum( me.column('dni_za_mes')))
 
-    _set_ = dict( otrab_dni=TextFld( 'Œ·˘Ó:'))
+    _set_ = dict( otrab_dni=TextFld( '–û–±—â–æ:'))
     _calc_ = dict( realna_zap=sum_zap_get, dni_za_mes=sum_days_get)
 
 from reporter.common import threshold

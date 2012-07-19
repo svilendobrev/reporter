@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 
 class Cached( object):
     '''function in obj.__dict__ gets overwritten with it's result'''

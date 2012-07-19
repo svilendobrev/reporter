@@ -1,8 +1,8 @@
 #$Id$
-# -*- coding: cp1251 -*-
+# -*- coding: utf-8 -*-
 
 class Spravka( object):
-    ''' Базовия клас за всички справки'''
+    ''' Р‘Р°Р·РѕРІРёСЏ РєР»Р°СЃ Р·Р° РІСЃРёС‡РєРё СЃРїСЂР°РІРєРё'''
     description = dict()
     model_mapping = dict()
 
@@ -14,7 +14,7 @@ class Spravka( object):
         '"init" is prettier than "__init__"'
         me.__dict__.update( kargs)
 
-    def query( me, context, dbcontext=None):    #db, project и прочие
+    def query( me, context, dbcontext=None):    #db, project Рё РїСЂРѕС‡РёРµ
         return context
 
     def refresh( me, context, container =None, data_obj =None, dbcontext=None):
@@ -143,8 +143,8 @@ class _RedovaMeta( _DescrInheritanceMeta):
 
 
 class RedovaSpravka( Spravka):
-    ''' Oгъвка на класификатора на редове (RowClassifier),
-        която добавя интерфейс за дефиниране на полетата.
+    ''' OРіСЉРІРєР° РЅР° РєР»Р°СЃРёС„РёРєР°С‚РѕСЂР° РЅР° СЂРµРґРѕРІРµ (RowClassifier),
+        РєРѕСЏС‚Рѕ РґРѕР±Р°РІСЏ РёРЅС‚РµСЂС„РµР№СЃ Р·Р° РґРµС„РёРЅРёСЂР°РЅРµ РЅР° РїРѕР»РµС‚Р°С‚Р°.
     '''
     __metaclass__ = _RedovaMeta
     RowType = None
@@ -213,7 +213,7 @@ class RedovaSpravka( Spravka):
     def _setup_classifier( me):
         me.row_classifier = RowClassifier( me.preserve_input_order)
         group_defs = getattr( me.groups, 'data', me.groups) #FIXME
-        if not group_defs: # FIXME гадно спасяване за момента
+        if not group_defs: # FIXME РіР°РґРЅРѕ СЃРїР°СЃСЏРІР°РЅРµ Р·Р° РјРѕРјРµРЅС‚Р°
             group_defs = me.groups = dict( za_nomer_na_red_FIXME = me.GroupDef( None, None) )
         for name, g in group_defs.iteritems():
             me.row_classifier.group(

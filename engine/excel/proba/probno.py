@@ -1,5 +1,5 @@
 #$Id$
-# -*- coding: cp1251 -*-
+
 from pyExcelerator import *
 imena = ['Varna','samokov']
 w = Workbook()
