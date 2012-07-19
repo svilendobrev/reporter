@@ -1,9 +1,6 @@
-#$Id$
 
-
-from data_model import Browseable4DB
 from spravka import SprDataModel
-from reporter.engine.basedb.types_base import _static_type, Date
+from ..basedb.types_base import _static_type, Date
 
 class DateInterval( _static_type.StaticStruct):
     date_from = Date()
