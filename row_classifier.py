@@ -30,7 +30,7 @@ class RowClassifier( object):
             return
         from row import AggrRow
         from group import Group, UnorderedGroup
-        from reporter.engine.util.attr import issubclass
+        from svd_util.attr import issubclass
         if issubclass( aggregators, AggrRow):
             aggregators = [ aggregators ]
         group_factory = me.preserve_input_order and Group or UnorderedGroup

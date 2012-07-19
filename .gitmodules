@@ -1,6 +1,3 @@
-[submodule "engine/util"]
-	path = engine/util
-	url = https://github.com/svilendobrev/svd_util.git
 [submodule "engine/rl2wx"]
 	path = engine/rl2wx
 	url = https://github.com/svilendobrev/rl2wx

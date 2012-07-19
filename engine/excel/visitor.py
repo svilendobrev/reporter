@@ -1,7 +1,7 @@
 #$Id$
 
 import pyXLWriter as xl
-#from dbcook.util.hacksrc import hacksrc
+#from svd_util.hacksrc import hacksrc
 
 #hacksrc( xl.Workbook._store_all_num_formats,
 #                    'if not re.match(r"^0+\d", num_format):',

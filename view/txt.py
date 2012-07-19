@@ -311,8 +311,7 @@ class ViewCrosstabTxt( TxtContextViewer, ViewRedovaBase):
 
 ####################################################### Poleva
 
-from reporter.engine.ui import layout
-from reporter.engine.ui.fielddata import FieldData
+from svd_util.ui import layout
 
 class LayoutField( layout.Field):
     def getFieldData( me):  # **fielddata won't work

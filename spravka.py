@@ -32,7 +32,7 @@ class Spravka( object):
 
 ################################
 
-from reporter.engine.util.attr import get_attrib, issubclass
+from svd_util.attr import get_attrib, issubclass
 
 def set_container_data( container, data_obj, description, context, **kargs):
     for name, fld in description.iteritems():

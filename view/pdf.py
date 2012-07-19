@@ -272,7 +272,7 @@ class PdfPanelVisitor( Panel.Visitor):
                 kargs = descr.get('kargs', {})
                 flowable = command( **kargs)
                 if flowable:
-                    from reporter.engine.util.attr import iscollection
+                    from svd_util.attr import iscollection
                     me.story.extend( iscollection( flowable) and list( flowable) or [ flowable ])
         else:
             print 'ERROR: unknown layout command: %s' % field.name

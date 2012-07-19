@@ -40,7 +40,7 @@ def reverse( order):
     res.reverse()
     return res
 
-from reporter.engine.util.attr import get_attrib
+from svd_util.attr import get_attrib
 def manage_descr_inheritance( cls, bases, dct):
     ''' simulates inheritance by overlapping field sources'''
     all = dict()
@@ -68,7 +68,7 @@ class _DescrInheritanceMeta( type):
         manage_descr_inheritance( cls, bases, dct)
 
 
-from reporter.engine.util.attr import flatten_vars
+from svd_util.attr import flatten_vars
 
 class _FieldContainerMeta( _DescrInheritanceMeta):
     ''' metaclass that lets a class contain the fields described in _field_sources;

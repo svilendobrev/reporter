@@ -1,8 +1,7 @@
 #$Id$
 # -*- coding: utf-8 -*-
 
-#from reporter.engine.ui.layout import Panel
-from layout import Panel
+from svd_util.ui.layout import Panel
 
 BTN_SIZE = (-1, 28) #(120, 28) is way faster under linux XXX
 

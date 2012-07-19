@@ -24,7 +24,7 @@ class SimpleCase( unittest.TestCase):
         me.assertEqual( me.data['a'], me.data['c'])
 
 
-from reporter.engine.util.attr import get_attrib
+from svd_util.attr import get_attrib
 from test_set import Case, get_test_suite, P
 all_cases = [
     P( dict( a=1, b='a', c='b', d='c'),

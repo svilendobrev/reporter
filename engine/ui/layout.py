@@ -1,6 +1,5 @@
-# $Id$
-#s.dobrev 2k3
-# dialog/form layout description - parser
+#s.dobrev 2k3-9
+'language for dialog/form layout description - parser & buider'
 
 import re
 
@@ -29,9 +28,8 @@ extender = '+'
 #field with empty flag makes empty column (nothing in it),
 # but attributes can be set via entry-name
 
-from reporter.engine.util.struct import Struct
-class Int(int):
-    pass
+from svd_util.struct import Struct
+class Int(int): pass
 
 class TokenMap( Struct):
     __slots__ = [ '_reversed']
@@ -511,8 +509,8 @@ if __name__ == '__main__1':
     """)
     )
 
-    from reporter.engine.util.mix import Grab_stdout
-    from reporter.engine.util.diff import diff
+    from svd_util.mix import Grab_stdout
+    from svd_util.diff import diff
     import unittest
     class t_Panel( unittest.TestCase):
         def test0_panel_ops( me):

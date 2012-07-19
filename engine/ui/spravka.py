@@ -3,7 +3,7 @@
 
 from data_model import Browseable as Browsable, FBR, ColDef
 from myctl import ActionChooser, BasicController, Chooser
-from reporter.engine.util.attr import setattr_from_kargs
+from svd_util.attr import setattr_from_kargs
 ################ spravka model
 
 class ColDef4Spr( object):
@@ -129,8 +129,8 @@ class SpravkaExportChooser( BasicController):
 
     @property
     def layout(me):
-        from reporter.engine.ui.layout import Panel
-        from reporter.engine.ui.generic_layouts import makeOkCancelPanel
+        from svd_util.ui.layout import Panel
+        from generic_layouts import makeOkCancelPanel
         fmap = dict( _format = dict( label = '', view_type = 'list_multi', expand = 'xy'))
         txt = '@Изберете формат\n[? _format ]'
         p = (Panel( title = 'Експорт', minsize = (320,240)) +
@@ -203,7 +203,7 @@ class SpravkaController( ActionChooser):
     def newChild( me, data_model =None, **kargs):
         db_obj = getattr( data_model, 'db_object', None)
         if db_obj:
-            from reporter.engine.ui.myctl import EditorModes
+            from myctl import EditorModes
             kargs['mode'] = EditorModes.UPDATE
             return ActionChooser.newChild( me, data_model=db_obj,  **kargs)
 

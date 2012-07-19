@@ -1,7 +1,7 @@
 #$Id$
 
 
-from reporter.engine.util.struct import DictAttr
+from svd_util.struct import DictAttr
 
 class FldType( object):
     view_defaults = DictAttr() # TODO to be flattened for type inheritance
@@ -76,7 +76,7 @@ from view.pdf import PdfView
 from view.html import HtmlView
 from view.view_base import FldViewBase, get_label_kargs
 from view.xl_view import XlsView
-from reporter.engine.util.attr import issubclass, get_attrib
+from svd_util.attr import issubclass, get_attrib, iscollection
 
 class ViewDef( object):
     views_to_create = [ FldView, wxBrowsableView, PdfView, wxPrintoutView, XlsView ]
@@ -183,9 +183,7 @@ class FieldDef( LinkContainer, ViewDef):
                             , **views)
 
 
-from reporter.engine.util.struct import DictAttr
-from reporter.engine.util.attr import iscollection, issubclass
-from reporter.engine.util.func2code import get_attr_usage
+from svd_util.func2code import get_attr_usage
 
 import itertools as it
 

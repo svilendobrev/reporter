@@ -1,7 +1,7 @@
 #$Id$
 
 
-from reporter.engine.util.attr import get_attrib
+from svd_util.attr import get_attrib
 
 class LinkBase( object):
     def dereference( me, namespace):

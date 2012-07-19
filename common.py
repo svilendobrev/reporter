@@ -15,7 +15,7 @@ from link import Link as AS
 from view.view_base import FldViewBase, ViewAttr
 
 
-from reporter.engine.util.dictOrder import dictOrder
+from svd_util.py3 import dictOrder
 class Groups( object):
     def __init__( me, **kargs):
         me.data = dictOrder() # topology order
@@ -48,7 +48,7 @@ class Groups( object):
         for subname in subgroups:
             me._add_group( subname, all_groups, new_threshold, new_filter)
 
-from reporter.engine.ui.layout import Panel
+from svd_util.ui.layout import Panel
 
 def make_field_builder( data_type):
     def builder( model=None, label=None, *args, **kargs):

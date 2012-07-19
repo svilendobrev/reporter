@@ -1,7 +1,6 @@
 #$Id$
 # -*- coding: utf-8 -*-
 import itertools
-from reporter.engine.util import attr
 
 from field_container import _FieldContainerMeta, FieldSource
 class _RowMeta( _FieldContainerMeta):
@@ -38,7 +37,7 @@ class Row( object):
                          for k in itertools.chain( me._set_.iterkeys(), me._calc_.iterkeys()))
 
 
-from reporter.engine.util.attr import get_attrib
+from svd_util.attr import get_attrib
 class AggrRow( Row):
     ''' Притежава всички свойства на нормален ред. Има списък с редове върху които изчислява своите полета.'''
     _set_ = {}

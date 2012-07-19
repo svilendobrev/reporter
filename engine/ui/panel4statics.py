@@ -1,9 +1,8 @@
-#$Id$
 #s.dobrev 2k4
-# dialog/form layout auto-generated from static_type. initialy inside resgen/formrec
+'dialog/form layout auto-generated from static_type'
 
-from layout import Panel
-from reporter.engine.util.attr import get_attrib, issubclass
+from svd_util.ui.layout import Panel
+from svd_util.attr import get_attrib, issubclass
 
 class _static_type:
     'default setup. may overwrite with your own BEFORE calling anything here'

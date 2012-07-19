@@ -28,7 +28,7 @@ else:
             return s.encode('utf-8')
 
 
-from reporter.engine.util.attr import get_attrib
+from svd_util.attr import get_attrib
 
 class ViewerBase( object):
     view_context_name = None
@@ -197,7 +197,7 @@ def calc_by_context( func, context):
 
 #############################################
 
-from reporter.engine.util.attr import isiterable
+from svd_util.attr import isiterable
 class CmdDescr( object):
     def __init__( me, cmd_name, value_convert =None, value_processor =None):
         me.cmd_name = cmd_name  # dict for command translation or just a name
