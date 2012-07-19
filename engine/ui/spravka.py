@@ -3,7 +3,6 @@
 
 from data_model import Browseable as Browsable, FBR, ColDef
 from myctl import ActionChooser, BasicController, Chooser
-from uitools import _
 from reporter.engine.util.attr import setattr_from_kargs
 ################ spravka model
 
@@ -162,8 +161,8 @@ class SpravkaController( ActionChooser):
     EXTRA_ACTIONS = ActionChooser.EXTRA_ACTIONS + ['action_Refresh', 'action_Printout', 'action_Export']
 
     def action_Refresh( me, *args, **kargs):
-        updater = me.view.ProgressDialog( title= _('Моля, изчакайте..'),
-                                          message= _('Зареждане на данни'))
+        updater = me.view.ProgressDialog( title= 'Моля, изчакайте..',
+                                          message= 'Зареждане на данни' )
         updater.update()
         me.setValue( *args, **kargs)
         #me.Redraw()
@@ -171,8 +170,8 @@ class SpravkaController( ActionChooser):
 
     def action_Printout( me):
         from reporter.common import show_preview
-        updater = me.view.ProgressDialog( title= _('Моля, изчакайте..'),
-                                          message= _( 'Подготовка на печат') )
+        updater = me.view.ProgressDialog( title= 'Моля, изчакайте..',
+                                          message= 'Подготовка на печат' )
         updater.update()
         label = 'Печат на '+str( me.title)
         show_preview( me.model.spr, label, parent=me.view.frame)
